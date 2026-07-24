@@ -1,0 +1,4 @@
+interface:
+  display_name: "文档提取免费版"
+  short_description: "批量提取文本PDF和Word基础信息，单次最多10个文件"
+  default_prompt: "使用 $document-extractor-lite 从本地文本PDF和Word中提取基础信息。"
