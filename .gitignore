@@ -1,11 +1,14 @@
 .venv/
 __pycache__/
 .pytest_cache/
+.pytest-tmp/
 *.py[cod]
 .tmp/
 dist/
 .env
 .env.*
 customer-data/
+customer-config/
 inputs/
 outputs/
+jobs/
