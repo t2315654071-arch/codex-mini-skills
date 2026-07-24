@@ -20,3 +20,4 @@ jobs:
       - run: python -m pip_audit -r requirements.txt --strict
       - run: python -m pytest
       - run: python scripts/generate_examples.py
+      - run: python packaging/build_release.py --output-dir dist

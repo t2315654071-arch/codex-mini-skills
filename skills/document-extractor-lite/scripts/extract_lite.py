@@ -11,7 +11,7 @@ from typing import Any
 from docx import Document
 from pypdf import PdfReader
 
-VERSION = "0.1.0"
+VERSION = "1.0.0"
 MAX_FILES = 10
 SUPPORTED_EXTENSIONS = {".pdf", ".docx"}
 CSV_FIELDS = [

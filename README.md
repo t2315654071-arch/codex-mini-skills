@@ -1,6 +1,6 @@
 # 文档提取免费版
 
-一个完全离线的Codex基础技能，用于把本地文字型PDF和DOCX整理成可由Excel直接打开的固定字段CSV。
+当前正式版本为`v1.0.0`。这是一个完全离线的Codex基础技能，用于把本地文字型PDF和DOCX整理成可由Excel直接打开的固定字段CSV。
 
 ## 功能边界
 
@@ -30,6 +30,8 @@ python .\skills\document-extractor-lite\scripts\extract_lite.py `
 ```
 
 ## 安装为Codex技能
+
+下载Release ZIP并校验同名`.sha256`文件后解压，然后在解压目录运行：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\install.ps1
