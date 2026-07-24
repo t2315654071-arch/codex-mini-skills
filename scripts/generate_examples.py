@@ -67,12 +67,14 @@ def main() -> None:
         INPUT_DIR / "synthetic-invoice.pdf",
         "Synthetic Invoice INV-2026-001 Amount 128.50 Date 2026-07-24",
     )
-    document = Document()
-    document.add_heading("合成项目通知", level=1)
-    document.add_paragraph("文档编号：SYN-2026-002")
-    document.add_paragraph("日期：2026-07-24")
-    document.add_paragraph("本文件完全由程序生成，不包含任何客户数据。")
-    document.save(INPUT_DIR / "合成项目通知.docx")
+    docx_path = INPUT_DIR / "合成项目通知.docx"
+    if not docx_path.exists():
+        document = Document()
+        document.add_heading("合成项目通知", level=1)
+        document.add_paragraph("文档编号：SYN-2026-002")
+        document.add_paragraph("日期：2026-07-24")
+        document.add_paragraph("本文件完全由程序生成，不包含任何客户数据。")
+        document.save(docx_path)
 
     result = load_extractor().extract_directory(INPUT_DIR, OUTPUT_FILE)
     print(result)
