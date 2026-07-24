@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import sys
 from pathlib import Path
 
 from docx import Document
@@ -60,6 +61,9 @@ def load_extractor():
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
     INPUT_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
